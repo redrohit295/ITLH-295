@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+	<script src="jquery.js"></script>
+
+<style type="text/css">
+
+</style>
+
+</head>
+
+
+<body>
+<div class="container">
+<div class="row">
+<div class="abc col-sm-8">
+<p> HELLO</p>
+</div>
+
+<div class="col-sm-4" >
+<button class="form-control" id="login"> LOGIN</button> <br><br>
+<button class="form-control" id="register"> REGISTER</button> <br><br>
+<button class="form-control" id="fpassword"> FORGOT PASSWORD?</button>
+
+
+<script type="text/javascript">
+
+$('#login').on("click",function(){
+	$.ajax({
+             url: "login-partial.html"
+         }).done(function(response) {
+
+
+         	console.log(response);
+         	$('.abc').html(response);
+         });
+
+     });
+
+$('#register').on("click",function(){
+	$.ajax({
+             url: "registration.html"
+         }).done(function(response) {
+
+
+         	console.log(response);
+         	$('.abc').html(response);
+         });
+
+     });
+
+
+$('#fpassword').on("click",function(){
+	$.ajax({
+             url: "pass.html"
+         }).done(function(response) {
+
+
+         	console.log(response);
+         	$('.abc').html(response);
+         });
+
+     });
+
+</script>
+
+</div>
+</div>
+</div>
+
+</body>
+</html>
